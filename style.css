@@ -1,0 +1,95 @@
+.wrapper {
+  height: 100%;
+  max-width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.title{
+  color:rgb(144, 100, 109);
+  font-size: 50px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.draggableEl {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  width: calc(1160px / 5);
+  height: 192px;
+  cursor: grab;
+  background: url("img/kindpng_354070.png") 0 192px;
+}
+
+.draggableEl_animate {
+  animation: dogRun 0.6s steps(5) infinite;
+}
+
+@keyframes dogRun {
+  0% {
+    background-position-x: 0px;
+    background-position-y: 0px;
+  }
+  50% {
+    background-position-x: -1180px;
+    background-position-y: 0px;
+  }
+  51% {
+    background-position-x: 0px;
+    background-position-y: 192px;
+  }
+  100% {
+    background-position: -1180px;
+    background-position-y: 192px;
+  }
+}
+
+.laptop {
+  position: absolute;
+  left: 40%;
+
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.dsiplay {
+  width: 600px;
+  height: 355px;
+  position: absolute;
+  top: 27.5px;
+  left: 115px;
+  z-index: 50;
+  overflow: hidden;
+
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.bones {
+  position: relative;
+
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.bones_animate {
+  animation: bg 1.2s linear infinite;
+}
+@keyframes bg {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: -650px;
+  }
+}
